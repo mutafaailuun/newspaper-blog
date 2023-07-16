@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: Sprat_Regular;
+    src: url("/public/fonts/sprat/Sprat-Regular.otf") format("opentype");
+  }
+  @font-face {
+    font-family: Sprat_EB;
+    src: url("/public/fonts/sprat/Sprat-ExtendedBlack.otf") format("opentype");
+  }
+  @font-face {
+    font-family: Benguiat_B;
+    src: url("/public/fonts/benguiat/benguib.ttf") format("truetype");
+  }
