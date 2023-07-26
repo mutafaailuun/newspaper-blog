@@ -1,5 +1,5 @@
 <div class="flex justify-items-sctretch">
-    <div class="w-9/12 mx-4 border-r-2 border-gray-300 pr-8">
+    <div class="w-9/12 border-r-2 border-gray-300 pr-8">
         <img src="/img/holy-quran.jpg" alt="girl holding qur'an" class="w-full rounded-md max-w-5xl mx-auto">
         <h1 class="font-sprat-reg text-2xl text-justify my-2">Tiga Amalan Penghapus Kesalahan dan Pengangkat Derajat
         </h1>
@@ -21,9 +21,9 @@
         </ul>
     </div>
 
-    <div class="w-3/12 mx-4">
+    <div class="w-3/12">
         @foreach ($blogs as $post)
-            <div class="mb-5">
+            <div class="mb-5 hover:bg-gray-800  hover:text-slate-50 p-4 rounded-lg">
                 <a href="/blog/{{ $post->slug }}">
                     <img src="img/{{ $post->imageUrl }}.jpg" alt="" class="w-full rounded-xl"></a>
                 <a href="/blog/{{ $post->slug }}">
@@ -32,11 +32,11 @@
                 </a>
                 <p class="font-roboto font-thin text-sm text-justify my-1">{{ $post->article }}
                 </p>
-                <ul class="flex justify-between">
-                    <li class="font-sprat-reg font-light text-sm text-gray-700">
+                <ul class="flex justify-between ">
+                    <li class="font-sprat-reg font-light text-sm">
                         <a href="">{{ $post->created_at->format('d M Y') }}</a>
                     </li>
-                    <li class="font-sprat-reg font-light text-sm text-gray-700">
+                    <li class="font-sprat-reg font-light text-sm">
                         <a href="">By: {{ $post->user->name }}</a>
                     </li>
                 </ul>
