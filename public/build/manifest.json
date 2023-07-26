@@ -1,0 +1,24 @@
+{
+  "public/fonts/benguiat/benguib.ttf": {
+    "file": "assets/benguib-eef6e9c1.ttf",
+    "src": "public/fonts/benguiat/benguib.ttf"
+  },
+  "public/fonts/sprat/Sprat-ExtendedBlack.otf": {
+    "file": "assets/Sprat-ExtendedBlack-5a5947a4.otf",
+    "src": "public/fonts/sprat/Sprat-ExtendedBlack.otf"
+  },
+  "public/fonts/sprat/Sprat-Regular.otf": {
+    "file": "assets/Sprat-Regular-01d774c2.otf",
+    "src": "public/fonts/sprat/Sprat-Regular.otf"
+  },
+  "resources/css/app.css": {
+    "file": "assets/app-ed205049.css",
+    "isEntry": true,
+    "src": "resources/css/app.css"
+  },
+  "resources/js/app.js": {
+    "file": "assets/app-0d91dc04.js",
+    "isEntry": true,
+    "src": "resources/js/app.js"
+  }
+}
