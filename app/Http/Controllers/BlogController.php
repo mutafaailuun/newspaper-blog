@@ -10,16 +10,20 @@ class BlogController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function showBlog()
+    public function index()
     {
         return view('blog', [
             'title' => 'Blog',
-            "blogs" => Blog::all()
+            'blogs' => Blog::all()
         ]);
     }
-    public function index()
+
+    public function showPost(Blog $post)
     {
-        //
+        return view('post', [
+            'title' => 'Single Post',
+            'post' => $post
+        ]);
     }
 
     /**

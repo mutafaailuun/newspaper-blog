@@ -7,14 +7,14 @@
     </div>
     <div>
         <ul class="flex items-center">
-            <li class="mx-3 font-roboto hover:border-b-4 border-gray-400">
-                <a href="/">Home</a>
+            <li class="mx-3 font-roboto hover:border-b-4 border-gray-400 ">
+                <a href="/">Beranda</a>
             </li>
             <li class="mx-3 font-roboto hover:border-b-4 border-gray-400">
                 <a href="/blog">Blog</a>
             </li>
             <li class="mx-3 font-roboto hover:border-b-4 border-gray-400">
-                <a href="/books">Books</a>
+                <a href="/categories">Category</a>
             </li>
             <li class="mx-3 font-roboto hover:border-b-4 border-gray-400">
                 <a href="/about">About</a>

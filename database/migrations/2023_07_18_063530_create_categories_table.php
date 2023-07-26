@@ -10,13 +10,10 @@ return new class extends Migration {
      */
     public function up() : void
     {
-        Schema::create('mahasantris', function (Blueprint $table) {
+        Schema::create('categories', function (Blueprint $table) {
             $table->id();
-            $table->integer('nps');
-            $table->string('name');
-            $table->string('angkatan');
-            $table->integer('semester');
-            $table->timestamp('published_at')->nullable();
+            $table->string('name')->unique();
+            $table->string('slug')->unique();
             $table->timestamps();
         });
     }
@@ -26,6 +23,6 @@ return new class extends Migration {
      */
     public function down() : void
     {
-        Schema::dropIfExists('mahasantris');
+        Schema::dropIfExists('categories');
     }
 };

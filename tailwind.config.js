@@ -12,7 +12,8 @@ export default {
         "sprat-eb" : "Sprat_EB",
         "beng-b" : "Benguiat_B",
         roboto: "Roboto",
-        "roboto-light": "Roboto Light"
+        "roboto-light": "Roboto Light",
+        amiri: 'Amiri'
       }
     },
     fontSize: {

@@ -20,43 +20,26 @@
             </li>
         </ul>
     </div>
+
     <div class="w-3/12 mx-4">
-        <div class="mb-5">
-            <img src="img/girl.jpg" alt="" class="w-full rounded-xl">
-            <h1 class="font-sprat-reg text-lg text-justify my-2">Memahami Yang Tak Tersampaikan
-            </h1>
-            <p class="font-roboto font-thin text-sm text-justify my-1"> Apakah sebuah teks hanya memiliki makna dari apa
-                yang tertulis? Atau justru teks memiliki banyak makna yang tidak tertuliskan? Sehingga penting untuk
-                menelusuri apa saja makna yang tidak tertulis dalam sebuah teks guna mendapatkan pengetahuan lebih dari
-                apa yang terkandung di dalamnya.
-
-            </p>
-            <ul class="flex justify-between">
-                <li class="font-sprat-reg font-light text-sm text-gray-700">
-                    <a href="">Feb 11 23</a>
-                </li>
-                <li class="font-sprat-reg font-light text-sm text-gray-700">
-                    <a href="">By: Farhan Fadlurohman</a>
-                </li>
-            </ul>
-        </div>
-        <div>
-            <img src="img/masjid.jpg" alt="" class="w-full rounded-xl">
-            <h1 class="font-sprat-reg text-lg text-justify my-2">Kas Masjid Sebagai Fungsi Sosial dan Ekonomi Masyarakat
-
-            </h1>
-            <p class="font-roboto font-thin text-sm text-justify my-1"> Masjid di zaman Rasulullah Shallalahu’alaihi
-                wasallam
-                merupakan pusatnya peradaban umat muslim.
-            </p>
-            <ul class="flex justify-between">
-                <li class="font-sprat-reg font-light text-sm text-gray-700">
-                    <a href="">Feb 11 23</a>
-                </li>
-                <li class="font-sprat-reg font-light text-sm text-gray-700">
-                    <a href="">By: Farhan Fadlurohman</a>
-                </li>
-            </ul>
-        </div>
+        @foreach ($blogs as $post)
+            <div class="mb-5">
+                <a href="/blog/{{ $post->slug }}">
+                    <img src="img/{{ $post->imageUrl }}.jpg" alt="" class="w-full rounded-xl"></a>
+                <a href="/blog/{{ $post->slug }}">
+                    <h1 class="font-sprat-reg text-lg text-justify my-2">{{ $post->title }}
+                    </h1>
+                </a>
+                <p class="font-roboto font-thin text-sm text-justify my-1">{{ $post->article }}
+                </p>
+                <ul class="flex justify-between">
+                    <li class="font-sprat-reg font-light text-sm text-gray-700">
+                        <a href="">{{ $post->created_at->format('d M Y') }}</a>
+                    </li>
+                    <li class="font-sprat-reg font-light text-sm text-gray-700">
+                        <a href="">By: {{ $post->user->name }}</a>
+                    </li>
+                </ul>
+            </div>
+        @endforeach
     </div>
-</div>

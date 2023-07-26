@@ -1,12 +1,11 @@
 <?php
 
 use App\Http\Controllers\BlogController;
-use App\Http\Controllers\MhsController;
+use App\Http\Controllers\HomeController;
+use App\Models\Category;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('home', ["title" => "Home"]);
-});
+Route::get('/', [HomeController::class, 'index']);
 
 Route::get('/about', function () {
     return view('about', [
@@ -19,8 +18,18 @@ Route::get('/about', function () {
 });
 
 
-Route::get('/blog', [BlogController::class, 'showBlog']);
-// Route::get('/blog', [MhsController::class, 'showMhs']);
-
-//halaman single post
-// Route::get('posts/{slug}', [PostController::class, "showPost"]);
+Route::get('/blog', [BlogController::class, 'index']);
+Route::get('/blog/{post:slug}', [BlogController::class, 'showPost']);
+Route::get('/categories', function () {
+    return view('categories', [
+        'title' => 'Categories',
+        'categories' => Category::all()
+    ]);
+});
+Route::get('/categories/{category:slug}', function (Category $category) {
+    return view('category', [
+        'title' => $category->name,
+        'posts' => $category->posts,
+        'category' => $category->name
+    ]);
+});
